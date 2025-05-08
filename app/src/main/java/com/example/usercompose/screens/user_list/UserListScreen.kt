@@ -1,4 +1,4 @@
-package com.example.usercompose.ui.user_list
+package com.example.usercompose.screens.user_list
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -40,19 +40,19 @@ fun UserListScreen(userListViewModel: UserListViewModel = viewModel()) {
                 Column(
                     modifier = Modifier.weight(1f)
                 ) {
-                    Text(text = user.id.toString(), style = MaterialTheme.typography.bodyLarge)
-                    Text(text = user.firstName, style = MaterialTheme.typography.bodyLarge)
-                    Text(text = user.lastName, style = MaterialTheme.typography.bodyLarge)
-                    Text(text = user.email, style = MaterialTheme.typography.bodyLarge)
+                    Text(text = user.gender, style = MaterialTheme.typography.bodyLarge)
+                    Text(text = user.name.title, style = MaterialTheme.typography.bodyLarge)
+                    Text(text = user.name.first, style = MaterialTheme.typography.bodyLarge)
+                    Text(text = user.name.last, style = MaterialTheme.typography.bodyLarge)
                 }
-                AsyncImage(
-                    model = user.avatar,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(100.dp)
-                        .clip(CircleShape),
-                    contentScale = ContentScale.Crop
-                )
+//                AsyncImage(
+//                    model = user.avatar,
+//                    contentDescription = null,
+//                    modifier = Modifier
+//                        .size(100.dp)
+//                        .clip(CircleShape),
+//                    contentScale = ContentScale.Crop
+//                )
             }
 
         }

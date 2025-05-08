@@ -1,4 +1,4 @@
-package com.example.usercompose.ui.main
+package com.example.usercompose.screens.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,8 +7,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.usercompose.ui.theme.UserComposeTheme
-import com.example.usercompose.ui.user_list.UserListScreen
+import com.example.usercompose.screens.theme.UserComposeTheme
+import com.example.usercompose.screens.user_detail.UserDetailScreen
+import com.example.usercompose.screens.user_list.UserListScreen
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    UserListScreen()
+                   UserListScreen()
+//                    UserDetailScreen(userId = 15) { }
                 }
             }
         }
